@@ -1,0 +1,151 @@
+/* ===== Base Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #333;
+  background: #f9fafb;
+  line-height: 1.6;
+}
+
+/* ===== Header ===== */
+.header {
+  background: #4a90e2;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== Navigation (Flexbox) ===== */
+.navbar {
+  background: #2c3e50;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0.5rem;
+}
+
+.navbar li {
+  margin: 0 1rem;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 0.75rem;
+  transition: background 0.3s;
+}
+
+.navbar a:hover {
+  background: #4a90e2;
+  border-radius: 5px;
+}
+
+/* ===== Main Layout (Grid) ===== */
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.content {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.sidebar {
+  background: #e9ecef;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+/* ===== Flexbox Cards ===== */
+.card-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 150px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+}
+
+/* ===== Footer ===== */
+.footer {
+  background: #2c3e50;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* ===== Responsive Media Queries ===== */
+
+/* Mobile (max 600px) */
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-container {
+    flex-direction: column;
+  }
+}
+
+/* Tablet (601px – 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: 3fr 1fr;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+  }
+
+  .card-container {
+    justify-content: space-around;
+  }
+}
+
+/* Desktop (901px and up) */
+@media (min-width: 901px) {
+  .grid-container {
+    grid-template-columns: 2fr 1fr;
+  }
+}
